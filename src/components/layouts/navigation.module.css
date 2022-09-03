@@ -1,0 +1,12 @@
+.container {
+  position: fixed;
+  right: 8%;
+  top: 8%;
+  z-index: 1;
+  display: flex;
+}
+
+.link {
+  margin: 0 15px;
+  font-weight: 300;
+}

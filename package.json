@@ -1,0 +1,27 @@
+{
+  "name": "personal_website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@mantine/core": "^5.2.0",
+    "@mantine/hooks": "^5.2.0",
+    "framer-motion": "^7.2.0",
+    "gsap": "^3.11.0",
+    "locomotive-scroll": "^4.1.4",
+    "next": "12.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-locomotive-scroll": "^0.2.2",
+    "resize-observer-polyfill": "^1.5.1"
+  },
+  "devDependencies": {
+    "eslint": "8.22.0",
+    "eslint-config-next": "12.2.5"
+  }
+}

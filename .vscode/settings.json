@@ -1,0 +1,43 @@
+{
+    "files.exclude": {
+        //* Prettier
+        ".prettierrc": true,
+        ".prettierignore": true,
+        //* ESLint
+        ".eslintrc": true,
+        ".eslintignore": true,
+        //* Git
+        ".gitignore": true,
+        //* Husky
+        ".husky": true,
+        //* Vercel & Next.js
+        "vercel.json": true,
+        "next.config.js": false,
+        "next.config.mjs": true,
+        // "next-i18next.config.js": true,
+        "next-env.d.ts": true,
+        ".next": true,
+        //* Javascript / TypeScript
+        "tsconfig.json": true,
+        "jsconfig.json": true,
+        //* Tailwind & PostCSS
+        // "tailwind.config.js": true,
+        // "postcss.config.js": true,
+        //* Renovate
+        "renovate.json": true,
+        //* Sentry
+        // "sentry.properties": true,
+        // "sentry.client.config.js": true,
+        // "sentry.server.config.js": true,
+        //* Environment variables
+        // ".env": true,
+        // ".env.local": true,
+        //* Node modules & lock files
+        // "package.json": true,
+        "node_modules": true,
+        "package-lock.json": true,
+        "yarn.lock": true,
+        //* Miscellaneous
+        "README.md": true
+    }
+}
