@@ -12,17 +12,7 @@ function MyApp({ Component, pageProps, router }) {
       {<CustomCursor />}
       <DefaultLayout>
         <AnimatePresence mode="wait">
-          <motion.div
-            key={router.route}
-            transition={{
-              duration: 0,
-            }}
-            exit={{
-              x: 0,
-            }}
-          >
-            <Component {...pageProps} key={router.route} />
-          </motion.div>
+          <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </DefaultLayout>
     </Providers>
