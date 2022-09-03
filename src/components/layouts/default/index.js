@@ -1,8 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import useWindowDimensions from "../../../hooks/useDimensions";
-import CustomCursor from "../../custom/cursor/cursor";
-// import SmoothScroll from "../../custom/SmoothScroll";
-// import { ScrollSmoother } from "gsap/ScrollSmoother";
+
 import { gsap } from "gsap/dist/gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
