@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import styles from "./IntroSection.module.css";
+import styles from "../../../styles/home.css";
 import { motion, useMotionValue } from "framer-motion";
 import SplitText from "../../../utils/split3.min";
 import IntroImage from "./image";
