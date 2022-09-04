@@ -11,13 +11,18 @@ function MyApp({ Component, pageProps, router }) {
     <Providers>
       {<CustomCursor />}
       <DefaultLayout>
-        <AnimatePresence
-          mode="wait"
-          onExitComplete={() => {
-            console.log("exit complete");
-          }}
-        >
-          <Component {...pageProps} key={router.pathname} />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={router.pathname}
+            exit={{
+              x: 0,
+              transition: {
+                duration: 0,
+              },
+            }}
+          >
+            <Component {...pageProps} />
+          </motion.div>
         </AnimatePresence>
       </DefaultLayout>
     </Providers>

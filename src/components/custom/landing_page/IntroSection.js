@@ -1,11 +1,10 @@
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import styles from "../../../styles/home.css";
-import { motion, useMotionValue } from "framer-motion";
+// import styles from "../../../styles/home.css";
+import { motion } from "framer-motion";
 import SplitText from "../../../utils/split3.min";
 import IntroImage from "./image";
 import DecoratedElement from "./decorated_element";
-
+import styles from "./IntroSection.module.css";
 import { gsap } from "gsap/dist/gsap";
 import { useLayout } from "../../../hooks/useLayout";
 
