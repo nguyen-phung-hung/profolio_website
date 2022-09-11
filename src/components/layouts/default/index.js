@@ -47,6 +47,9 @@ function DefaultLayout({ children }) {
         <>
           <Navigation />
           <motion.div
+            onClick={() => {
+              router.push("/");
+            }}
             style={{
               position: "fixed",
               // width: "6vw",

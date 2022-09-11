@@ -1,5 +1,6 @@
 import AboutIntroSection from "../components/custom/about_page/IntroSection";
 import { motion } from "framer-motion";
+import FirstSection from "../components/custom/about_page/FirstSection";
 
 function AboutPage() {
   return (
@@ -18,6 +19,13 @@ function AboutPage() {
       }}
     >
       <AboutIntroSection />
+      <FirstSection />
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+        }}
+      ></div>
     </motion.div>
   );
 }

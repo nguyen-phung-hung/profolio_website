@@ -1,11 +1,110 @@
 .container {
   width: 100%;
-  height: 200vh;
+  height: 100vh;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_container {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 
 .relative_container {
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+
+.main_text_container {
+  position: absolute;
+  z-index: 1;
+  font-size: 9vw;
+  font-family: "Aboreto ,cursive";
+}
+
+.container2 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container2_header {
+  font-size: 2.4vw;
+  font-weight: 400;
+  width: 75%;
+  text-align: left;
+}
+
+.container2_inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+}
+
+.section_container2 {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2vw;
+}
+
+.section_innercontainer2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgb(158, 158, 158);
+}
+
+.section_container2_number {
+  text-align: left;
+  width: 100%;
+  font-size: 1vw;
+  color: rgb(158, 158, 158);
+  margin-bottom: 2vw;
+}
+
+.section_container2_title {
+  font-size: 2vw;
+  font-family: "Aboreto ,cursive";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.icon {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: 0;
+}
+
+.section_container2_content {
+  font-size: 1.2vw;
+  font-weight: 300;
+}
+
+.container3 {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  /* background-color: aqua; */
+  z-index: -1;
 }

@@ -32,7 +32,7 @@ function LoadingTransition() {
       ease: Back.easeOut,
     });
     document.addEventListener("keydown", (input) => {
-      if (input.key === "e") {
+      if (input.key === "e" || input.key === "E") {
         setLoading(false);
       }
     });

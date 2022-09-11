@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useLayout } from "../../hooks/useLayout";
 import HoverLink from "../animations/HoverLink";
 import styles from "./navigation.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const links = [
   {
@@ -37,6 +37,18 @@ function Navigation() {
   const router = useRouter();
   const { pageLoading } = useLayout();
   const [activeLink, setActiveLink] = useState(router.pathname);
+  const [timeOutID, setTimeOutID] = useState(null);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setActiveLink(router.pathname);
+    }, 1000);
+
+    setTimeOutID(timeout);
+
+    return () => {
+      clearTimeout(timeOutID);
+    };
+  }, [router.pathname]);
 
   return (
     <AnimatePresence mode="wait">
@@ -64,11 +76,6 @@ function Navigation() {
               return (
                 activeLink !== link.href && (
                   <HoverLink
-                    onClick={() => {
-                      setTimeout(() => {
-                        setActiveLink(link.href);
-                      }, 1000);
-                    }}
                     className={styles.link}
                     key={link.name}
                     initial={{ opacity: 0 }}
