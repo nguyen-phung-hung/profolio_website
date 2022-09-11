@@ -4,9 +4,54 @@ import { motion } from "framer-motion";
 import SplitText from "../../../utils/split3.min";
 import IntroImage from "./image";
 import DecoratedElement from "./decorated_element";
-import styles from "./IntroSection.module.css";
+// import styles from "./IntroSection.module.css";
 import { gsap } from "gsap/dist/gsap";
 import { useLayout } from "../../../hooks/useLayout";
+import { createUseStyles } from "react-jss";
+
+const useStyles = createUseStyles({
+  main_container: {
+    position: "relative",
+    width: "100%",
+    height: "100vh",
+    display: "grid",
+    gridTemplateColumns: "repeat(25, 4%)",
+    gridTemplateRows: "repeat(25, 4%)",
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+    position: "relative",
+    overflow: "hidden",
+    zIndex: 1,
+  },
+  image_inner: {
+    width: "100%",
+    height: "100%",
+    position: "relative",
+  },
+
+  "image:nth-child(1)": {
+    gridArea: "8 / 2 / 17 / 5",
+  },
+  "image:nth-child(2)": {
+    gridArea: "11/ 19 / 23 /23",
+  },
+  element: {
+    position: "relative",
+    width: "10vw",
+    height: "10vw",
+    zIndex: 11,
+  },
+  slogan_text: {
+    gridArea: "22/11/23/16",
+    width: "100%",
+    fontWeight: 100,
+    fontFamily: "Noto Serif HK, serif",
+    fontSize: "1vw",
+    textAlign: "center",
+  },
+});
 
 const images = [
   {
@@ -90,6 +135,7 @@ const elements = [
 function IntroSection() {
   const mainRef = useRef();
   const textRef = useRef();
+  const styles = useStyles();
 
   const { pageLoading } = useLayout();
   const [firstLoading, setFirstLoading] = useState(true);
