@@ -6,6 +6,11 @@ import HoverLink from "../animations/HoverLink";
 import styles from "./navigation.module.css";
 import { useState, useEffect } from "react";
 
+import { createUseStyles } from "react-jss";
+import { navigationStyles } from "./LayoutStyle.js";
+
+const useStyles = createUseStyles(navigationStyles);
+
 const links = [
   {
     name: "Home",
@@ -34,6 +39,8 @@ const links = [
 ];
 
 function Navigation() {
+  const styles = useStyles();
+
   const router = useRouter();
   const { pageLoading } = useLayout();
   const [activeLink, setActiveLink] = useState(router.pathname);

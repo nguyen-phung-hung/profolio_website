@@ -7,12 +7,6 @@
   align-items: center;
 }
 
-.test {
-  position: absolute;
-  width: 100vw;
-  font-size: 3vw;
-}
-
 .inner_container {
   width: 80%;
 }

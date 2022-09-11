@@ -1,9 +1,14 @@
-import styles from "./IntroSection.module.css";
 import { motion } from "framer-motion";
 import { useLayout } from "../../../hooks/useLayout";
 import Image from "next/image";
+import { createUseStyles } from "react-jss";
+import { introSectionStyles } from "./GalleryPageStyle";
+
+const useStyles = createUseStyles(introSectionStyles);
 
 function GalleryIntroSection() {
+  const styles = useStyles();
+
   const { imageValue } = useLayout();
 
   return (

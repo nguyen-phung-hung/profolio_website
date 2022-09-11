@@ -1,6 +1,6 @@
 //?300vh section
 
-import styles from "./IntroSection.module.css";
+// import styles from "./IntroSection.module.css";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useLayout } from "../../../hooks/useLayout";
 import Image from "next/image";
@@ -9,6 +9,9 @@ import { gsap, Power2 } from "gsap/dist/gsap";
 import SplitText from "../../../utils/split3.min";
 import useWindowDimensions from "../../../hooks/useDimensions";
 import SparklesIcon from "../../icons/sparkles";
+import { createUseStyles } from "react-jss";
+import { introSectionStyles } from "./AboutPageStyle";
+const useStyles = createUseStyles(introSectionStyles);
 
 const defaultSpring = {
   stiffness: 400,
@@ -35,6 +38,7 @@ const introSections = [
 ];
 
 function AboutIntroSection() {
+  const styles = useStyles();
   const { imageValue, pageLoading } = useLayout();
   const hasWindow = typeof window !== "undefined";
   const mainTextRef = useRef(null);

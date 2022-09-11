@@ -1,10 +1,10 @@
-import styles from "./first_section.module.css";
 import SplitText from "../../../utils/split3.min";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-
+import { createUseStyles } from "react-jss";
+import { firstSectionStyles } from "./AboutPageStyle";
 import { gsap, Power2 } from "gsap/dist/gsap";
 
 const ParallaxWrapper = dynamic(
@@ -13,8 +13,10 @@ const ParallaxWrapper = dynamic(
     ssr: false,
   }
 );
+const useStyles = createUseStyles(firstSectionStyles);
 
 function FirstSection() {
+  const styles = useStyles();
   const mainTextRef = useRef(null);
   const text1Ref = useRef(null);
   const text2Ref = useRef(null);
