@@ -76,6 +76,16 @@ function CustomCursor() {
     //     backgroundColor: "#fff",
     //   };
     // }
+
+    if (cursorType === "inline-hover") {
+      animate = {
+        ...animate,
+        scale: 0.2,
+        transition: { duration: 0.4 },
+      };
+      return animate;
+    }
+
     if (isHovered.x || isHovered.y) {
       animate = {
         ...animate,

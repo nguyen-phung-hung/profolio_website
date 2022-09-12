@@ -13,10 +13,6 @@ function SubLoading() {
   const [timeOutID, setTimeOutID] = useState();
   const [timeOutID2, setTimeOutID2] = useState();
 
-  console.log("allSet", allSet);
-  console.log("pageLoading", pageLoading);
-  console.log("animationCompleted", animationCompleted);
-
   useEffect(() => {
     if (!pageLoading.loading) {
       setScrollLocked(false);

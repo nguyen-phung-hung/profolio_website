@@ -1,11 +1,13 @@
 import SplitText from "../../../utils/split3.min";
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { createUseStyles } from "react-jss";
 import { firstSectionStyles } from "./AboutPageStyle";
 import { gsap, Power2 } from "gsap/dist/gsap";
+import { useLayout } from "../../../hooks/useLayout";
+import ArrowForwardIcon from "../../icons/ArrowForWard";
 
 const ParallaxWrapper = dynamic(
   () => import("../../animations/ParallaxWrapper"),
@@ -17,12 +19,16 @@ const useStyles = createUseStyles(firstSectionStyles);
 
 function FirstSection() {
   const styles = useStyles();
+
+  const { setCursorType } = useLayout();
+
   const mainTextRef = useRef(null);
   const text1Ref = useRef(null);
   const text2Ref = useRef(null);
   const [textReaveal, setTextReveal] = useState(false);
   const [textReaveal1, setTextReveal1] = useState(false);
   const [textReaveal2, setTextReveal2] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     if (!mainTextRef) return;
@@ -137,6 +143,9 @@ function FirstSection() {
       </section>
       <section className={styles.container1}>
         <div className={styles.inner_container1}>
+          <ParallaxWrapper className={styles.container1_slogan} offset={-50}>
+            {"Where the journey of curiosities & explorations began"}
+          </ParallaxWrapper>
           <motion.h1
             className={styles.container1_title}
             ref={text1Ref}
@@ -201,8 +210,92 @@ function FirstSection() {
               and to change in the blink of an eye.
             </p>
           </div>
-          <ParallaxWrapper offset={50}>
-            <div className={styles.container1_link}></div>
+          <ParallaxWrapper offset={100}>
+            <motion.a
+              href="https://www.subsica.com/hometown"
+              className={styles.container1_link}
+              target="_blank"
+              onMouseEnter={() => {
+                setCursorType("inline-hover");
+                setHovered(true);
+              }}
+              onMouseLeave={() => {
+                setCursorType(null);
+                setHovered(false);
+              }}
+            >
+              <AnimatePresence mode="popLayout">
+                {hovered ? (
+                  <motion.div
+                    className={styles.container1_link_text}
+                    key="text-link-section1"
+                    initial={{
+                      x: -100,
+                    }}
+                    animate={{
+                      x: 0,
+                      transition: {
+                        duration: 0.5,
+                        delay: 0.2,
+                      },
+                    }}
+                    exit={{
+                      x: 100,
+                      transition: {
+                        duration: 0.5,
+                      },
+                    }}
+                  >
+                    View
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    className={styles.arrow_icon}
+                    key="arrow-forward-section1"
+                    initial={{
+                      x: -100,
+                    }}
+                    animate={{
+                      x: 0,
+                      transition: {
+                        duration: 0.5,
+                        delay: 0.2,
+                      },
+                    }}
+                    exit={{
+                      x: 100,
+                      transition: {
+                        duration: 0.5,
+                      },
+                    }}
+                  >
+                    <ArrowForwardIcon />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              <AnimatePresence mode="wait">
+                {hovered && (
+                  <motion.div
+                    className={styles.icon_background}
+                    initial={{
+                      left: "-100%",
+                    }}
+                    animate={{
+                      left: "0%",
+                      transition: {
+                        duration: 0.5,
+                      },
+                    }}
+                    exit={{
+                      left: "100%",
+                      transition: {
+                        duration: 0.5,
+                      },
+                    }}
+                  />
+                )}
+              </AnimatePresence>
+            </motion.a>
           </ParallaxWrapper>
         </div>
       </section>
