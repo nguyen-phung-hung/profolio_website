@@ -7,7 +7,7 @@ import { createUseStyles } from "react-jss";
 import { firstSectionStyles } from "./AboutPageStyle";
 import { gsap, Power2 } from "gsap/dist/gsap";
 import { useLayout } from "../../../hooks/useLayout";
-import ArrowForwardIcon from "../../icons/ArrowForWard";
+import ArrowForwardIcon from "../../icons/ArrowForward";
 
 const ParallaxWrapper = dynamic(
   () => import("../../animations/ParallaxWrapper"),
