@@ -147,6 +147,12 @@ export const firstSectionStyles = {
     overflow: "hidden",
     top: 0,
   },
+  container1_slogan: {
+    position: "absolute",
+    width: "25%",
+    top: "20%",
+    fontWeight: 800,
+  },
   container1_title1: {
     position: "absolute",
     right: "19vw",
@@ -173,7 +179,7 @@ export const firstSectionStyles = {
   container1_para: {
     position: "absolute",
     width: "45vw",
-    fontSize: "1vw",
+    fontSize: "1.1vw",
     fontWeight: 300,
     right: 0,
     textAlign: "left",
@@ -184,12 +190,36 @@ export const firstSectionStyles = {
     width: "8vw",
     height: "8vw",
     borderRadius: "50%",
-    top: "20vw",
-    left: "20vw",
+    top: "25vw",
+    left: "22vw",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#050505",
     color: "#fff",
+    // fontWeight: 600,
+    cursor: "pointer",
+    overflow: "hidden",
+  },
+  arrow_icon: {
+    width: "2vw",
+    height: "2vw",
+    position: "absolute",
+    zIndex: 2,
+  },
+
+  container1_link_text: {
+    position: "absolute",
+    zIndex: 2,
+    color: "#050505",
+  },
+
+  icon_background: {
+    width: "8vw",
+    height: "8vw",
+    borderRadius: "50%",
+    position: "absolute",
+    zIndex: 1,
+    backgroundColor: "#fff",
   },
 };
