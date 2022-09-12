@@ -11,8 +11,8 @@ function ParallaxWrapper({
   onHoverStart,
   onHoverEnd,
   initialstate,
-  yInitial,
-  yFinal,
+  yInitial = 0,
+  yFinal = 0,
 }) {
   const [elementTop, setElementTop] = useState(0);
   const [clientHeight, setClientHeight] = useState(0);
@@ -21,9 +21,9 @@ function ParallaxWrapper({
   const { scrollY } = useScroll();
 
   // start animating our element when we've scrolled it into view
-  const initial = elementTop - clientHeight + yInitial;
+  const initial = elementTop - clientHeight + yInitial ?? 0;
   // end our animation when we've scrolled the offset specified
-  const final = elementTop + offset + yFinal;
+  const final = elementTop + offset + yFinal ?? 0;
 
   const yRange = useTransform(scrollY, [initial, final], [offset, -offset]);
   const y = useSpring(yRange, { stiffness: 400, damping: 90 });

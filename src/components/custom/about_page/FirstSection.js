@@ -189,6 +189,21 @@ function FirstSection() {
               <Image src={"/highres_image/hochiminh.png"} layout="fill" />
             </ParallaxWrapper>
           </motion.div>
+          <div className={styles.container1_para}>
+            <p>
+              The city where I live is known for its drastic change in the last
+              decade, particularly in the digital field. I am a developer and
+              happened to be born in the midst of this transition.
+            </p>
+            <p>
+              The race for the digital world is as fierce as ever before and
+              will continue to post challenges for fellow developers to adapt
+              and to change in the blink of an eye.
+            </p>
+          </div>
+          <ParallaxWrapper offset={50}>
+            <div className={styles.container1_link}></div>
+          </ParallaxWrapper>
         </div>
       </section>
     </>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useLayout } from "../../hooks/useLayout";
 import HoverLink from "../animations/HoverLink";
-import styles from "./navigation.module.css";
+// import styles from "./navigation.module.css";
 import { useState, useEffect } from "react";
 
 import { createUseStyles } from "react-jss";
