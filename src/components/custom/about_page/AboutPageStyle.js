@@ -93,7 +93,7 @@ export const introSectionStyles = {
   container3: {
     position: "relative",
     width: "100%",
-    height: "50vh",
+    height: "150vh",
     zIndex: -1,
   },
 };
@@ -129,7 +129,7 @@ export const firstSectionStyles = {
   },
   container1: {
     width: "100%",
-    height: "200vh",
+    height: "150vh",
     position: "relative",
     display: "flex",
     justifyContent: "center",
@@ -212,6 +212,7 @@ export const firstSectionStyles = {
     position: "absolute",
     zIndex: 2,
     color: "#050505",
+    fontWeight: 600,
   },
 
   icon_background: {
@@ -221,5 +222,49 @@ export const firstSectionStyles = {
     position: "absolute",
     zIndex: 1,
     backgroundColor: "#fff",
+  },
+  container2: {
+    width: "100%",
+    height: "100vh",
+    position: "relative",
+    display: "flex",
+    justifyContent: "center",
+  },
+  inner_container2: {
+    width: "80%",
+    height: "100%",
+    position: "relative",
+  },
+  container2_title: {
+    fontSize: "4vw",
+    position: "absolute",
+    display: "flex",
+    flexDirection: "column",
+    right: "27vw",
+    top: "-15vw",
+    color: "#050505",
+  },
+  image2: {
+    width: "25vw",
+    height: "35vw",
+    position: "absolute",
+    top: "5vw",
+  },
+  container2_para: {
+    position: "absolute",
+    width: "30%",
+    top: "3.5vw",
+    left: "30vw",
+    fontSize: "1.1vw",
+    fontWeight: 300,
+  },
+  container2_slogan: {
+    position: "absolute",
+    right: 0,
+    width: "25%",
+    fontWeight: 800,
+    textAlign: "right",
+    fontSize: "1.2vw",
+    top: "15vw",
   },
 };

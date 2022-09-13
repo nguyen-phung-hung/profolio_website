@@ -1,4 +1,4 @@
-//?300vh section
+//?350vh section
 
 // import styles from "./IntroSection.module.css";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
@@ -197,13 +197,7 @@ function AboutIntroSection() {
           })}
         </div>
       </motion.section>
-      <section
-        className={styles.container}
-        style={{
-          zIndex: -1,
-        }}
-      ></section>
-      <section className={styles.container3}></section>
+      <section className={styles.container3} />
     </>
   );
 }

@@ -299,6 +299,56 @@ function FirstSection() {
           </ParallaxWrapper>
         </div>
       </section>
+      <section className={styles.container2}>
+        <div className={styles.inner_container2}>
+          <h1 className={styles.container2_title}>
+            <span>Courage</span>
+            <span>Amibition</span>
+          </h1>
+          <motion.div
+            className={styles.image2}
+            initial={{
+              clipPath: `inset(100% 0% 0% 0%)`,
+            }}
+            viewport={{
+              amount: "some",
+              once: true,
+            }}
+            whileInView={{
+              clipPath: `inset(0% 0% 0% 0%)`,
+              transition: {
+                duration: 1,
+                type: "spring",
+                stiffness: 20,
+                damping: 10,
+              },
+            }}
+          >
+            <ParallaxWrapper
+              className={styles.image_inner1}
+              offset={-150}
+              yInitial={100}
+              yFinal={800}
+            >
+              <Image src={"/highres_image/street.png"} layout="fill" />
+            </ParallaxWrapper>
+          </motion.div>
+          <div className={styles.container2_para}>
+            <p>
+              It is a long journey filled with difficulties ahead, both
+              academically and personally. I am always ready to take on the
+              challenge and to learn from it as I go.
+            </p>
+            <p>
+              Driving with encouragement from family and myself, and together
+              with determination, I am able to push myself to where I am now.
+            </p>
+          </div>
+          <h5 className={styles.container2_slogan}>
+            Life is not always a straight line and so our emotions
+          </h5>
+        </div>
+      </section>
     </>
   );
 }
