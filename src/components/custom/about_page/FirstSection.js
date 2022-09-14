@@ -25,9 +25,15 @@ function FirstSection() {
   const mainTextRef = useRef(null);
   const text1Ref = useRef(null);
   const text2Ref = useRef(null);
+  const text3Ref = useRef(null);
+  const text4Ref = useRef(null);
+
   const [textReaveal, setTextReveal] = useState(false);
   const [textReaveal1, setTextReveal1] = useState(false);
   const [textReaveal2, setTextReveal2] = useState(false);
+  const [textReaveal3, setTextReveal3] = useState(false);
+  const [textReaveal4, setTextReveal4] = useState(false);
+
   const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
@@ -94,6 +100,50 @@ function FirstSection() {
       }
     );
   }, [textReaveal2]);
+
+  useEffect(() => {
+    if (!text3Ref) return;
+    if (!textReaveal3) return;
+    const mySplitText = new SplitText(text3Ref.current, {
+      type: "words,chars",
+    });
+
+    gsap.fromTo(
+      mySplitText.chars,
+      {
+        y: 100,
+      },
+      {
+        y: 0,
+
+        stagger: 0.04,
+        duration: 1,
+        ease: Power2.easeOut,
+      }
+    );
+  }, [textReaveal3]);
+
+  useEffect(() => {
+    if (!text4Ref) return;
+    if (!textReaveal4) return;
+    const mySplitText = new SplitText(text4Ref.current, {
+      type: "words,chars",
+    });
+
+    gsap.fromTo(
+      mySplitText.chars,
+      {
+        y: 100,
+      },
+      {
+        y: 0,
+
+        stagger: 0.04,
+        duration: 1,
+        ease: Power2.easeOut,
+      }
+    );
+  }, [textReaveal4]);
 
   return (
     <>
@@ -302,8 +352,34 @@ function FirstSection() {
       <section className={styles.container2}>
         <div className={styles.inner_container2}>
           <h1 className={styles.container2_title}>
-            <span>Courage</span>
-            <span>Amibition</span>
+            <motion.span
+              style={{
+                overflow: "hidden",
+              }}
+              ref={text3Ref}
+              onViewportEnter={() => {
+                setTextReveal3(true);
+              }}
+              viewport={{
+                once: true,
+              }}
+            >
+              Courage
+            </motion.span>
+            <motion.span
+              style={{
+                overflow: "hidden",
+              }}
+              ref={text4Ref}
+              onViewportEnter={() => {
+                setTextReveal4(true);
+              }}
+              viewport={{
+                once: true,
+              }}
+            >
+              Amibition
+            </motion.span>
           </h1>
           <motion.div
             className={styles.image2}
@@ -344,9 +420,9 @@ function FirstSection() {
               with determination, I am able to push myself to where I am now.
             </p>
           </div>
-          <h5 className={styles.container2_slogan}>
+          <ParallaxWrapper className={styles.container2_slogan} offset={-50}>
             Life is not always a straight line and so our emotions
-          </h5>
+          </ParallaxWrapper>
         </div>
       </section>
     </>

@@ -11,7 +11,12 @@
   "dependencies": {
     "@mantine/core": "^5.2.0",
     "@mantine/hooks": "^5.2.0",
+    "@react-three/drei": "^9.29.1",
+    "@react-three/fiber": "^8.7.3",
+    "babel-plugin-glsl": "^1.0.0",
     "framer-motion": "^7.2.0",
+    "glsl-noise": "^0.0.0",
+    "glslify": "^7.1.1",
     "gsap": "^3.11.0",
     "locomotive-scroll": "^4.1.4",
     "next": "12.2.5",
@@ -19,7 +24,8 @@
     "react-dom": "18.2.0",
     "react-jss": "^10.9.2",
     "react-locomotive-scroll": "^0.2.2",
-    "resize-observer-polyfill": "^1.5.1"
+    "resize-observer-polyfill": "^1.5.1",
+    "three": "^0.144.0"
   },
   "devDependencies": {
     "eslint": "8.22.0",

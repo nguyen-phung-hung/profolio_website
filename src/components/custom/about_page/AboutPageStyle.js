@@ -252,7 +252,8 @@ export const firstSectionStyles = {
   },
   container2_para: {
     position: "absolute",
-    width: "30%",
+    width:
+      "3                                                                                                             0%",
     top: "3.5vw",
     left: "30vw",
     fontSize: "1.1vw",
@@ -266,5 +267,17 @@ export const firstSectionStyles = {
     textAlign: "right",
     fontSize: "1.2vw",
     top: "15vw",
+  },
+};
+
+export const secondSectionStyles = {
+  container: {
+    width: "100%",
+    height: "100vh",
+    position: "relative",
+    displau: "grid",
+    placeItems: "center",
+    cursor: "grabbing",
+    backgroundColor: "#050505",
   },
 };

@@ -1,6 +1,7 @@
 import AboutIntroSection from "../components/custom/about_page/IntroSection";
 import { motion } from "framer-motion";
 import FirstSection from "../components/custom/about_page/FirstSection";
+import SectionSection from "../components/custom/about_page/SecondSection";
 
 function AboutPage() {
   return (
@@ -20,6 +21,7 @@ function AboutPage() {
     >
       <AboutIntroSection />
       <FirstSection />
+      <SectionSection />
       <div
         style={{
           width: "100vw",
