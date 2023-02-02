@@ -11,7 +11,7 @@ import { useLayout } from "../../../hooks/useLayout";
 function CustomCursor() {
   const cursorRef = useRef(null);
 
-  const { isHovered, cursorType, scrolled, indicater } = useLayout();
+  const { isHovered, cursorType, indicater } = useLayout();
 
   const motionX = useMotionValue(0);
   const motionY = useMotionValue(0);

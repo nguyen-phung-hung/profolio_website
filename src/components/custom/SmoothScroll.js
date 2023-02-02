@@ -2,7 +2,6 @@ import React, { useRef, useState, useCallback, useLayoutEffect } from "react";
 import ResizeObserver from "resize-observer-polyfill";
 import { useScroll, useTransform, useSpring, motion } from "framer-motion";
 
-import { gsap } from "gsap/dist/gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import CustomCursor from "./cursor/cursor";

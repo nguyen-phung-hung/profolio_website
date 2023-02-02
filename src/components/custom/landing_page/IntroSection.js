@@ -15,7 +15,7 @@ const useStyles = createUseStyles(landingStyles);
 const images = [
   {
     src: "/landing/cat.png",
-    alt: "Skill",
+    alt: "Skills",
     link: "/skills",
     color: "646464",
   },
@@ -33,8 +33,8 @@ const images = [
   },
   {
     src: "/landing/water.png",
-    alt: "Water",
-    link: "/water",
+    alt: "Life map",
+    link: "/life-map",
     color: "58483a",
   },
   {

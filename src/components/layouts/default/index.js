@@ -17,8 +17,19 @@ const SmoothScroll = dynamic(() => import("../../custom/SmoothScroll"), {
   ssr: false,
 });
 
+const HorizontalScroll = dynamic(
+  () => import("../../custom/HorizontalScroll"),
+  { ssr: false }
+);
+
+const horizontalPages = ["/life-map"];
+
 function DefaultLayout({ children }) {
   const router = useRouter();
+
+  const Scroll = horizontalPages.includes(router.pathname)
+    ? HorizontalScroll
+    : SmoothScroll;
 
   const mainRef = useRef();
   const { firstLoading, setPageLoading, pageLoading } = useLayout();
@@ -101,7 +112,7 @@ function DefaultLayout({ children }) {
           >
             Nguyen Phung Hung
           </motion.div>
-          <SmoothScroll>
+          <Scroll>
             <motion.main
               ref={mainRef}
               // data-scroll-container
@@ -121,7 +132,7 @@ function DefaultLayout({ children }) {
             >
               {children}
             </motion.main>
-          </SmoothScroll>
+          </Scroll>
         </>
       ) : (
         <>
